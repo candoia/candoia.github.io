@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang='en-us'>
+  <head>
+    <meta charset='UTF-8'>
+    <title>Candoia by candoia</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' href='../css/normalize.css' media='screen'>
+    <link rel='stylesheet' type='text/css' href='../css/suplimentry.css' media='screen'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,400italic' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' type='text/css' href='../css/supplimentry.css' media='screen'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+  </head>
+  <body>
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5TKBVH"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5TKBVH');</script>
+   <!-- End Google Tag Manager -->
+
+
+    <section class='page-header'>
+      <h2 class='project-tagline'>Supplementary Material - Candoia: A Platform for Building and Sharing Mining Software Repositories Tools as Apps</h2>
+	  <h5>by Nitin M Tiwari, Ganesha Upadhyaya, Anh Hoan Nguyen, and Hridesh Rajan </h5>
+    </section>
+
+    <section class='main-content'>
+      <h3>Table of Content</h3>
+	  	<ul>
+		 <li> Introduction</li>
+		 <li><a href = "app#1.html">App #1: Detects unreproducible or wont-fix bugs</a></li>
+		 <li><a href = "app#2.html">App #2: Detects improper usage of null</a></li>
+		 <li><a href = "app#3.html">App #3: Detects improper use of double checked locking idiom</a></li>
+		 <li><a href = "app#4.html">App #4: Detects improper usage of wait-notify idiom</a></li>
+		 <li><a href = "app#5.html">App #5: Identifies fixing revisions that add null checks</a></li>
+		 <li><a href = "app#6.html">App #6: Lists most frequently changed files</a></li>
+		 <li><a href = "app#7.html">App #7: Lists commits that involved a large number of files</a></li>
+		 <li><a href = "app#8.html">App #8: Commit blame assignment based on increase in repository size</a></li>
+		 <li><a href = "app#9.html">App #9: Provides details of latest revision, e.g. total changed files etc.</a></li>
+		 <li><a href = "app#10.html">App #10:  Provides details of developers’ last commits</a></li>
+		 <li><a href = "app#11.html">App #11:  Mining co-changed files via association mining</a></li>
+		 <li><a href = "app12.html">App #12:  Compute churn rate for fixing bugs</a></li>
+		 <li><a href = "app#13.html">App #13:  Ranks developers by the number of commits</a></li>
+		 <li><a href = "app#14.html">App #14:  Maps modules to developers</a></li>
+		 <li><a href = "app#15.html">App #15:  Computes number of attributes (NOA)</a></li>
+		 <li><a href = "app#16.html">App #16:  Computes number of public methods (NPM)</a></li>
+		 <li><a href = "app#17.html">App #17:  Identifies developers writing empty or one word commit logs</a></li>
+		 <li><a href = "app#18.html">App #18:  Associate bugs and source files</a></li>
+		 <li><a href = "app#19.html">App #19:  Detects violation of naming conventions</a></li>
+		 <li><a href = "app#20.html">App #20:  Checks serialization-related properties</a></li>
+		 <li><a href = "app#21.html">App #21:  Detects static fields which are public but not final</a></li>
+		 <li><a href = "app#22.html">App #22:  Identifies locations of dead code</a></li>
+		 <li><a href = "app#23.html">App #23:  Identifies deeply nested if statements</a></li>
+		 <li><a href = "app#24.html">App #24:  Computes various popularity metrics e.g. CK, OO etc.</a></li>
+	  	</ul>	  
+      <p>
+
+      </p>
+      <h3>Introduction</h3>
+	  In this work, we used the <a href = "www.candoia.org"> Candoia</a> to answer our research questions. Candoia enables
+	  developing, customizing and adopting mining software repository(MSR) tools as application.
+
+	  In this document we provide all Java source code, Candoia application code used to generate the data for this study. 
+	  We also provide the output of running these java programs, which is a chart used for this study. These results were further processed to present 
+	  them in the paper in a form easier to digest. 
+
+	  We provide these programs and data as an archival supplement to the paper, to allow researchers to understand our methodology 
+	  and, if they wish, use the data to investigate their own research questions.
+
+      <h3>
+      <a id='authors-and-contributors' class='anchor' href='#authors-and-contributors' aria-hidden='true'><span class='octicon octicon-link'></span></a>Authors and Contributors</h3>
+
+      <p>Candoia platform is developed at Iowa State University. The development is led by Hridesh Rajan (<a href='https://github.com/hridesh' class='user-mention'>@hridesh</a>) and project
+      contributors include Nitin Tiwari (<a href='https://github.com/nmtiwari' class='user-mention'>@nmtiwari</a>), Ganesha Upadhyaya (<a href='https://github.com/gupadhyaya' class='user-mention'>@gupadhyaya</a>), Dalton Mills (<a href='https://github.com/ddmills' class='user-mention'>@ddmills</a>), Eric Lin (<a href='https://github.com/eyhlin' class='user-mention'>@eyhlin</a>), and Trey Erenberger (<a href='https://github.com/TErenberger' class='user-mention'>@TErenberger</a>). </p>
+
+      <h3>
+      <a id='support-or-contact' class='anchor' href='#support-or-contact' aria-hidden='true'><span class='octicon octicon-link'></span></a>Support or Contact</h3>
+
+      <p>Having trouble with Candoia? Check out our <a href='https://candoia.github.io/help'>documentation</a> or <a href='https://candoia.github.io/support'>contact support</a> and we’ll help you sort it out.</p>
+
+    </section>
+
+    <script type='text/javascript'>
+    var gaJsHost = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.');
+    document.write(unescape('%3Cscript src='' + gaJsHost + 'google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E'));
+  </script>
+  <script type='text/javascript'>
+    try {
+      var pageTracker = _gat._getTracker('UA-67055837-1');
+    pageTracker._trackPageview();
+    } catch(err) {}
+  </script>
+
+  </body>
+</html>
