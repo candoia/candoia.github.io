@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang='en-us'>
+  <head>
+    <meta charset='UTF-8'>
+    <title>Candoia by candoia</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' href='../css/normalize.css' media='screen'>
+    <link rel='stylesheet' type='text/css' href='../css/suplimentry.css' media='screen'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,400italic' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' type='text/css' href='../css/supplimentry.css' media='screen'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+  </head>
+  <body>
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5TKBVH"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5TKBVH');</script>
+   <!-- End Google Tag Manager -->
+
+
+    <section class='page-header'>
+      <h2 class='project-tagline'>Supplementary Material - Candoia: A Platform for Building and Sharing Mining Software Repositories Tools as Apps</h2>
+	  <h5>by Nitin M Tiwari, Ganesha Upadhyaya, Anh Hoan Nguyen, and Hridesh Rajan </h5>
+    </section>
+
+    <section class='main-content'>
+      <h3>Table of Content</h3>
+	  	<ul>
+		 <li> Introduction</li>
+		 <li><a href = "app1.html">App #1: Detects unreproducible or Wont Fix bugs</a></li>
+		 <li><a href = "app2.html">App #2: Detects improper usage of null</a></li>
+		 <li><a href = "app3.html">App #3: Detects improper use of double checked locking idiom</a></li>
+		 <li><a href = "app4.html">App #4: Detects improper usage of wait-notify idiom</a></li>
+		 <li><a href = "app5.html">App #5: Identifies fixing revisions that add null checks</a></li>
+		 <li><a href = "app6.html">App #6: Lists most frequently changed files</a></li>
+		 <li><a href = "app7.html">App #7: Lists commits that involved a large number of files</a></li>
+		 <li><a href = "app8.html">App #8: Commit blame assignment based on increase in repository size</a></li>
+		 <li><a href = "app9.html">App #9: Provides details of latest revision, e.g. total changed files etc.</a></li>
+		 <li><a href = "app10.html">App #10:  Provides details of developers’ last commits</a></li>
+		 <li><a href = "app11.html">App #11:  Mining co-changed files via association mining</a></li>
+		 <li><a href = "app12.html">App #12:  Compute churn rate for fixing bugs</a></li>
+		 <li><a href = "app13.html">App #13:  Ranks developers by the number of commits</a></li>
+		 <li><a href = "app14.html">App #14:  Maps modules to developers</a></li>
+		 <li><a href = "app15.html">App #15:  Computes number of attributes (NOA)</a></li>
+		 <li><a href = "app16.html">App #16:  Computes number of public methods (NPM)</a></li>
+		 <li><a href = "app17.html">App #17:  Identifies developers writing empty or one word commit logs</a></li>
+		 <li><a href = "app18.html">App #18:  Associate bugs and source files</a></li>
+		 <li><a href = "app19.html">App #19:  Detects violation of naming conventions</a></li>
+		 <li><a href = "app20.html">App #20:  Checks serialization-related properties</a></li>
+		 <li><a href = "app21.html">App #21:  Detects static fields which are public but not final</a></li>
+		 <li><a href = "app22.html">App #22:  Identifies locations of dead code</a></li>
+		 <li><a href = "app23.html">App #23:  Identifies deeply nested if statements</a></li>
+		 <li><a href = "app24.html">App #24:  Computes various popularity metrics e.g. CK, OO etc.</a></li>
+	  	</ul>	  
+      <p>
+        <br> <h1 align ="center"> Wont Fix Issues</h1>
+        <P align="center"><b>Comaparison between Java and Candoia versions of Wont Fix Application</b></p>
+        <br>
+
+        <style type="text/css">
+          table.tableizer-table {
+            font-size: 12px;
+            border: 1px solid #CCC; 
+            font-family: Arial, Helvetica, sans-serif;
+          } 
+          .tableizer-table td {
+            padding: 4px;
+            border: 1px solid #CCC;
+            width: 10px
+          }
+          .tableizer-table th {
+            background-color: #9F0000; 
+            color: #FFF;
+            font-weight: bold;
+          }
+        </style>
+
+        <P align="center">
+           <b>Adoptability Results</b>
+       </p>    
+      <hr>  
+        <table class="tableizer-table" align = "center">
+        <thead><tr class="tableizer-firstrow"><th colspan=17>Wont Fix Issue detector Application</th></tr></thead><tbody>
+        <tr><td align = "center">Setting</td><td align = "center" colspan="3">Project Setting</td><td align = "center" colspan="7" style="background-color:#7FFFD4">Java</td><td  align = "center"  colspan="6" style="background-color:#6495ED">Candoia</td></tr>
+       
+        <tr>
+          <td align = "center">#</td><td align = "center">VCS</td>
+          <td align = "center">PL</td><td align = "center">Bug</td>
+          <td align = "center">M_{VCS}</td><td align = "center">M_{Bug}</td>
+          <td align = "center">M_{Forge}</td><td align = "center">"M_{Mining}</td>
+          <td align = "center">M_{Visualize}</td><td align = "center">Total</td>
+          <td align = "center">Total</td><td align = "center">Boa</td><td align = "center">JS</td>
+          <td align = "center">HTML</td><td align = "center">CSS</td><td align = "center">Candoia Code</td>
+          <td align = "center">Java Code</td>
+        </tr>
+        
+        <tr><td align = "center">1</td><td align = "center">GIT</td><td align = "center">Java</td><td align = "center">Git-Issues</td>
+            <td align = "center">0</td>
+            <td align = "center">75</td>
+            <td align = "center">0</td>
+            <td align = "center">38</td>
+            <td align = "center">53</td>
+            <td align = "center">166</td>
+            <td align = "center">97</td>
+            <td align = "center">10</td>
+            <td align = "center">12</td>
+            <td align = "center">43</td>
+            <td align = "center">32</td>
+            <td align = "center"><a href="https://github.com/candoia/wontfix-bug-detector">won't-fix</a></td>
+            <td align = "center"><a href="https://github.com/candoia/candoia-apps-in-java/tree/master/apps/setting1/wont_fix_bugscouwont fix bugs"> wont fix</a> </td>
+            </tr>
+        
+        <tr><td align = "center">2</td><td align = "center">SVN</td><td align = "center">Java</td><td align = "center">BugZilla</td>
+            <td align = "center">0</td>
+            <td align = "center">27(-67,+19)</td>
+            <td align = "center">0</td>
+            <td align = "center">59(-19,+40)</td>
+            <td align = "center">53(-1,+1)</td>
+            <td align = "center">139(-87,+60)</td>
+           <td align = "center">97</td>
+            <td align = "center">10</td>
+            <td align = "center">12</td>
+            <td align = "center">43</td>
+            <td align = "center">32</td>
+            <td align = "center"><a href="https://github.com/candoia/wontfix-bug-detector">won't-fix</a></td>
+            <td align = "center"><a href="https://github.com/candoia/candoia-apps-in-java/tree/master/apps/setting2/wont_fix_bugs"> wont fix bugs #2</a></td>
+            </tr>
+
+        <tr><td align = "center">3</td><td align = "center">GIT</td><td align = "center">Java</td><td align = "center">Jira</td>
+            <td align = "center">0</td>
+            <td align = "center">46(-65,+36)</td>
+            <td align = "center">0</td>
+            <td align = "center">59(-19,+40)</td>
+            <td align = "center">53(-1,+1)</td>
+            <td align = "center">158(-85,+77)</td>
+           <td align = "center">97</td>
+            <td align = "center">10</td>
+            <td align = "center">12</td>
+            <td align = "center">43</td>
+            <td align = "center">32</td>
+            <td align = "center"><a href="https://github.com/candoia/wontfix-bug-detector">won't-fix</a></td>
+            <td align = "center"><a href="https://github.com/candoia/candoia-apps-in-java/tree/master/apps/setting3/wont_fix_bugs"> wont fix bugs #3</a></td>
+            </tr>
+
+        <tr><td align = "center">4</td><td align = "center">GIT</td><td align = "center">Java</td><td align = "center">SVN-Tickets</td>
+            <td align = "center">0</td>
+            <td align = "center">46(-62,+33)</td>
+            <td align = "center">0</td>
+            <td align = "center">50(-15,+27)</td>
+            <td align = "center">53(-1,+1)</td>
+            <td align = "center">149(-78,+61)</td>
+            <td align = "center">97</td>
+            <td align = "center">10</td>
+            <td align = "center">12</td>
+            <td align = "center">43</td>
+            <td align = "center">32</td>
+            <td align = "center"><a href="https://github.com/candoia/wontfix-bug-detector">won't-fix</a></td>
+            <td align = "center"><a href="https://github.com/candoia/candoia-apps-in-java/tree/master/apps/setting4/wont_fix_bugs"> wont fix bugs #4</a></td>
+            </tr>
+
+        <tr><td align = "center">5</td><td align = "center">SVN</td><td align = "center">Java</td><td align = "center">SVN-Tickets</td>
+            <td align = "center">0</td>
+            <td align = "center">42(-63,+30)</td>
+            <td align = "center">0</td>
+            <td align = "center">46(-19,+27)</td>
+            <td align = "center">53(-1,+1)</td>
+            <td align = "center">141(-83,+58)</td>
+           <td align = "center">97</td>
+            <td align = "center">10</td>
+            <td align = "center">12</td>
+            <td align = "center">43</td>
+            <td align = "center">32</td>
+            <td align = "center"><a href="https://github.com/candoia/wontfix-bug-detector">won't-fix</a></td>
+            <td align = "center"><a href="https://github.com/candoia/candoia-apps-in-java/tree/master/apps/setting5/wont_fix_bugs"> wont fix bugs #5</a></td>
+            </tr>
+
+      <tr><td align = "center">6</td><td align = "center">GIT</td><td align = "center">JS</td><td align = "center">Git-Issues</td>
+            <td align = "center">0</td>
+            <td align = "center">75(-1,+1)</td>
+            <td align = "center">0</td>
+            <td align = "center">32(-7,+7)</td>
+            <td align = "center">53(-1,+1)</td>
+            <td align = "center">160(-5,+5)</td>
+            <td align = "center">97</td>
+            <td align = "center">10</td>
+            <td align = "center">12</td>
+            <td align = "center">43</td>
+            <td align = "center">32</td>
+            <td align = "center"><a href="https://github.com/candoia/wontfix-bug-detector">won't-fix</a></td>
+            <td align = "center"><a href="https://github.com/candoia/candoia-apps-in-java/tree/master/apps/setting6/wont_fix_bugs"> wont fix bugs #6</a></td>
+            </tr>                  
+        </tbody></table>
+
+    </section>
+
+    <script type='text/javascript'>
+    var gaJsHost = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.');
+    document.write(unescape('%3Cscript src='' + gaJsHost + 'google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E'));
+  </script>
+  <script type='text/javascript'>
+    try {
+      var pageTracker = _gat._getTracker('UA-67055837-1');
+    pageTracker._trackPageview();
+    } catch(err) {}
+  </script>
+
+
+  </body>
+</html>
