@@ -80,25 +80,48 @@
 
         <div>
             <div class="row">
-                <div class="col-lg-5 col-lg-offset-0 col-sm-push-2  col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Description</h2>    
-                    NOA(Number of Attriubutes) per class is an important propoerty to study from Software engineering and repository mining perspective. This apps 
+                <div class="col-lg-7 col-lg-offset-1 col-sm-push-2  col-sm-2">
+                    <h2>Description</h2>
+                    NOA(Number of Attriubutes) per class is an important propoerty to study from Software engineering and repository mining perspective. This apps
                     calculates and generate a chart of number of atttributes per class available in the project. Adoptability table is comparitive analysis of number
                     of lines of code to be written to compute NOA over 5 different settings of MSR artificats.
                 </div>
             </div>s
 
         </div>
-    </div> 
+    </div>
 
 
-    
+
+    <div class="content-section-b">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Visualization</h2>
+                    <ul class="lead">
+                            <li> A chart displaying the growth and decay of number of attributes for a class type in target project(Boa in our case)</li>
+                            <li> Displays a list of all types in the project.</li>
+                            <li> Choosing one type displays the history of NOA of that type</li>
+                    </ul>
+                </div>
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                    <img class="img-responsive" src="../img/noa.png" alt="Candoia Overview">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+
     <!-- Page Content -->
 <center>
  <a name ="download"></a>
-    <div class="content-section-b">
+    <div class="content-section-a">
         <div>
             <div class="row">
                     <h2 class="section-heading">Adoptability Results</h2>
@@ -189,7 +212,7 @@
            <td align = "center"><a href="https://github.com/candoia/candoia-apps-in-java/tree/master/apps/setting3/NOA"> code</a></td>
           </tr>
 
-         <tr><td align = "center">4</td><td align = "center">GIT</td><td align = "center">Java</td><td align = "center">SVN-Tickets</td>
+         <tr><td align = "center">4</td><td align = "center">GIT</td><td align = "center">Java</td><td align = "center">SF-Tickets</td>
            <td align = "center">63(-1,+1)</td>
            <td align = "center">0</td>
            <td align = "center">20(-1,+1)</td>
@@ -205,7 +228,7 @@
              <td align = "center"><a href="https://github.com/candoia/candoia-apps-in-java/tree/master/apps/setting4/NOA"> code</a></td>
              </tr>
 
-         <tr><td align = "center">5</td><td align = "center">SVN</td><td align = "center">Java</td><td align = "center">SVN-Tickets</td>
+         <tr><td align = "center">5</td><td align = "center">SVN</td><td align = "center">Java</td><td align = "center">SF-Tickets</td>
            <td align = "center">94(-36,+67)</td>
            <td align = "center">0</td>
            <td align = "center">27(-17,+24)</td>
@@ -241,8 +264,24 @@
          x(-y,+z) means there are total x number of lines of code in the module, of which y lines were removed and z lines were added to adopt the code for newer setting
         </div>
         <!-- /.container -->
-    </div>  
-</center>    
+    </div>
+</center>
+
+<div class="content-section-b">
+
+    <div>
+        <div class="row">
+            <div class="col-lg-7 col-lg-offset-1 col-sm-push-2  col-sm-2">
+                <h2>Analysis</h2>
+                From the above table it is evident that adopting a Java app for a different underlying MSR setting (combination of VCS, Bug etc.),
+                requires significant number of changes, while Candoia app remains unchanged. This not only decreases the efforts required to build
+                portable MSR app but also increases sharability aspects.
+            </div>
+        </div>s
+
+    </div>
+</div>
+
 
     <!-- Footer -->
     <footer>
