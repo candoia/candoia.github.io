@@ -79,9 +79,11 @@
             <div class="row">
                 <div class="col-lg-7 col-lg-offset-1 col-sm-push-2  col-sm-2">
                     <h2>About the App</h2>
-                    NOA (Number of Attriubutes) per class is an important propoerty to study from Software engineering and repository mining perspective. This apps
-                    calculates and generate a chart of number of atttributes per class available in the project. Adoptability table is comparitive analysis of number
-                    of lines of code to be written to compute NOA over 5 different settings of MSR artificats.
+                    Coupling between different modules and files is often interest and can
+                    help while refactoring the code base. Here is an app in Java and Candoia
+                    which provides information of co-changing files, using weka Apriory algorithm.
+                    This app can further be customized for module coupling or co-changing files with
+                    bug fixing issues.
                 </div>
             </div>s
 
@@ -100,13 +102,12 @@
                     <div class="clearfix"></div>
                     <h2 class="section-heading">Visualization</h2>
                     <ul class="lead">
-                            <li> A chart displaying the growth and decay of number of attributes for a class type in target project(Boa in our case)</li>
-                            <li> Displays a list of all types in the project.</li>
-                            <li> Choosing one type displays the history of NOA of that type</li>
+                            <li> Results of the coupling between files using Weka Apriory Algorithm.</li>
+                            <li> Currently this app uses all the revisions which have size smaller than 5, which can be customized as per user's requirements.</li>
                     </ul>
                 </div>
                 <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                    <img class="img-responsive" src="../img/noa.png" alt="Candoia Overview">
+                    <img class="img-responsive" src="../img/coupling11.png" alt="Candoia Overview">
                 </div>
             </div>
 
@@ -166,101 +167,222 @@
         </tr>
 
         <tr><td align = "center">1</td><td align = "center">GIT</td><td align = "center">Java</td><td align = "center">Git-Issues</td>
-            <td align = "center">0</td>
-            <td align = "center">75</td>
-            <td align = "center">0</td>
-            <td align = "center">38</td>
+            <td align = "center">72</td>
+            <td align = "center">139</td>
+            <td align = "center">20</td>
+            <td align = "center">138</td>
             <td align = "center">53</td>
-            <td align = "center">166</td>
-            <td align = "center">97</td>
-            <td align = "center">10</td>
+            <td align = "center">422</td>
+            <td align = "center">66</td>
+            <td align = "center">20</td>
             <td align = "center">12</td>
-            <td align = "center">43</td>
-            <td align = "center">32</td>
-            <td align = "center"><a href="https://github.com/candoia/wontfix-bug-detector">won't-fix</a></td>
-            <td align = "center"><a href="https://github.com/candoia/candoia-apps-in-java/tree/master/apps/setting1/wont_fix_bugscouwont fix bugs"> wont fix</a> </td>
+            <td align = "center">34</td>
+            <td align = "center">0</td>
+            <td align = "center"><a href="https://github.com/candoia/file-assocs">github</a></td>
+            <td align = "center"><a href="https://github.com/candoia/candoia-apps-in-java/tree/master/apps/setting1/fileAssociationMining"> file-coupling#1</a></td>
             </tr>
 
         <tr><td align = "center">2</td><td align = "center">SVN</td><td align = "center">Java</td><td align = "center">BugZilla</td>
-            <td align = "center">0</td>
-            <td align = "center">27(-67,+19)</td>
-            <td align = "center">0</td>
-            <td align = "center">59(-19,+40)</td>
+            <td align = "center">125(-38,+91)</td>
+            <td align = "center">60(-113,+34)</td>
+            <td align = "center">27(-15,+22)</td>
+            <td align = "center">140(-45,+47)</td>
             <td align = "center">53(-1,+1)</td>
-            <td align = "center">139(-87,+60)</td>
-           <td align = "center">97</td>
-            <td align = "center">10</td>
+            <td align = "center">405(-212,+195)</td>
+            <td align = "center">66</td>
+            <td align = "center">20</td>
             <td align = "center">12</td>
-            <td align = "center">43</td>
-            <td align = "center">32</td>
-            <td align = "center"><a href="https://github.com/candoia/wontfix-bug-detector">won't-fix</a></td>
-            <td align = "center"><a href="https://github.com/candoia/candoia-apps-in-java/tree/master/apps/setting2/wont_fix_bugs"> wont fix bugs #2</a></td>
+            <td align = "center">34</td>
+            <td align = "center">0</td>
+            <td align = "center"><a href="https://github.com/candoia/file-assocs">github</a></td>
+            <td align = "center"><a href="https://github.com/candoia/candoia-apps-in-java/tree/master/apps/setting2/fileAssociationMining"> file-coupling#2</a></td>
             </tr>
 
         <tr><td align = "center">3</td><td align = "center">GIT</td><td align = "center">Java</td><td align = "center">Jira</td>
-            <td align = "center">0</td>
-            <td align = "center">46(-65,+36)</td>
-            <td align = "center">0</td>
-            <td align = "center">59(-19,+40)</td>
+            <td align = "center">72(-1,+1)</td>
+            <td align = "center">146(-120,+127)</td>
+            <td align = "center">20(-1,+1)</td>
+            <td align = "center">146(-7,+15)</td>
             <td align = "center">53(-1,+1)</td>
-            <td align = "center">158(-85,+77)</td>
-           <td align = "center">97</td>
-            <td align = "center">10</td>
+            <td align = "center">437(-130,+145)</td>
+            <td align = "center">66</td>
+            <td align = "center">20</td>
             <td align = "center">12</td>
-            <td align = "center">43</td>
-            <td align = "center">32</td>
-            <td align = "center"><a href="https://github.com/candoia/wontfix-bug-detector">won't-fix</a></td>
-            <td align = "center"><a href="https://github.com/candoia/candoia-apps-in-java/tree/master/apps/setting3/wont_fix_bugs"> wont fix bugs #3</a></td>
+            <td align = "center">34</td>
+            <td align = "center">0</td>
+            <td align = "center"><a href="https://github.com/candoia/file-assocs">github</a></td>
+            <td align = "center"><a href="https://github.com/candoia/candoia-apps-in-java/tree/master/apps/setting3/fileAssociationMining"> file-coupling#3</a></td>
             </tr>
 
         <tr><td align = "center">4</td><td align = "center">GIT</td><td align = "center">Java</td><td align = "center">SVN-Tickets</td>
-            <td align = "center">0</td>
-            <td align = "center">46(-62,+33)</td>
-            <td align = "center">0</td>
-            <td align = "center">50(-15,+27)</td>
+            <td align = "center">72(-1,+1)</td>
+            <td align = "center">115(-106,+72)</td>
+            <td align = "center">20(-1,+1)</td>
+            <td align = "center">137(-4,+3)</td>
             <td align = "center">53(-1,+1)</td>
-            <td align = "center">149(-78,+61)</td>
-            <td align = "center">97</td>
-            <td align = "center">10</td>
+            <td align = "center">397(-113,+78)</td>
+            <td align = "center">66</td>
+            <td align = "center">20</td>
             <td align = "center">12</td>
-            <td align = "center">43</td>
-            <td align = "center">32</td>
-            <td align = "center"><a href="https://github.com/candoia/wontfix-bug-detector">won't-fix</a></td>
-            <td align = "center"><a href="https://github.com/candoia/candoia-apps-in-java/tree/master/apps/setting4/wont_fix_bugs"> wont fix bugs #4</a></td>
+            <td align = "center">34</td>
+            <td align = "center">0</td>
+            <td align = "center"><a href="https://github.com/candoia/file-assocs">github</a></td>
+            <td align = "center"><a href="https://github.com/candoia/candoia-apps-in-java/tree/master/apps/setting4/fileAssociationMining"> file-coupling#4</a></td>
             </tr>
 
         <tr><td align = "center">5</td><td align = "center">SVN</td><td align = "center">Java</td><td align = "center">SVN-Tickets</td>
-            <td align = "center">0</td>
-            <td align = "center">42(-63,+30)</td>
-            <td align = "center">0</td>
-            <td align = "center">46(-19,+27)</td>
+            <td align = "center">125(-38,+91)</td>
+            <td align = "center">95(-96,+52)</td>
+            <td align = "center">27(-15,+22)</td>
+            <td align = "center">133(-30,+25)</td>
             <td align = "center">53(-1,+1)</td>
-            <td align = "center">141(-83,+58)</td>
-           <td align = "center">97</td>
-            <td align = "center">10</td>
+            <td align = "center">433(-180,+191)</td>
+            <td align = "center">66</td>
+            <td align = "center">20</td>
             <td align = "center">12</td>
-            <td align = "center">43</td>
-            <td align = "center">32</td>
-            <td align = "center"><a href="https://github.com/candoia/wontfix-bug-detector">won't-fix</a></td>
-            <td align = "center"><a href="https://github.com/candoia/candoia-apps-in-java/tree/master/apps/setting5/wont_fix_bugs"> wont fix bugs #5</a></td>
+            <td align = "center">34</td>
+            <td align = "center">0</td>
+            <td align = "center"><a href="https://github.com/candoia/file-assocs">github</a></td>
+            <td align = "center"><a href="https://github.com/candoia/candoia-apps-in-java/tree/master/apps/setting5/fileAssociationMining"> file-coupling#5</a></td>
             </tr>
 
       <tr><td align = "center">6</td><td align = "center">GIT</td><td align = "center">JS</td><td align = "center">Git-Issues</td>
-            <td align = "center">0</td>
-            <td align = "center">75(-1,+1)</td>
-            <td align = "center">0</td>
-            <td align = "center">32(-7,+7)</td>
+            <td align = "center">72(-1,+1)</td>
+            <td align = "center">139(-1,+1)</td>
+            <td align = "center">20(-1,+1)</td>
+            <td align = "center">138(-1,+1)</td>
             <td align = "center">53(-1,+1)</td>
-            <td align = "center">160(-5,+5)</td>
-            <td align = "center">97</td>
-            <td align = "center">10</td>
+            <td align = "center">421(-5,+5)</td>
+            <td align = "center">66</td>
+            <td align = "center">20</td>
             <td align = "center">12</td>
-            <td align = "center">43</td>
-            <td align = "center">32</td>
-            <td align = "center"><a href="https://github.com/candoia/wontfix-bug-detector">won't-fix</a></td>
-            <td align = "center"><a href="https://github.com/candoia/candoia-apps-in-java/tree/master/apps/setting6/wont_fix_bugs"> wont fix bugs #6</a></td>
-            </tr
-          </tbody></table>
+            <td align = "center">34</td>
+            <td align = "center">0</td>
+            <td align = "center"><a href="https://github.com/candoia/file-assocs">github</a></td>
+            <td align = "center"><a href="https://github.com/candoia/candoia-apps-in-java/tree/master/apps/setting6/fileAssociationMining"> file-coupling#6</a></td>
+            </tr>
+        </tbody></table>
+
+     <br><br><br><br>
+        <P align="center">
+           <b>Customization Results</b>
+       </p>
+      <hr>
+
+
+        <table class="tableizer-table" align = "center">
+        <thead><tr class="tableizer-firstrow"><th colspan=15>File Association (Co-changing fies or file level coupling )(Using Setting 1) as base</th></tr></thead><tbody>
+          <tr>
+            <td align = "center">&nbsp;</td>
+            <td align = "center" >Application Detail</td>
+            <td align = "center" colspan="7" style="background-color:#7FFFD4">Java</td>
+            <td  align = "center"  colspan="6" style="background-color:#6495ED">Candoia</td>
+          </tr>
+        <tr>
+            <td align = "center">#</td>
+            <td align = "center" width="700">&nbsp;</td>
+            <td align = "center">M_{VCS}</td>
+            <td align = "center">M_{Bug}</td>
+            <td align = "center">M_{Forge}</td>
+            <td align = "center">"M_{Mining}</td>
+            <td align = "center">M_{Visualize}</td>
+            <td align = "center">Total</td>
+            <td align = "center">Total</td>
+            <td align = "center">Boa</td>
+            <td align = "center">JS</td>
+            <td align = "center">HTML</td>
+            <td align = "center">CSS</td>
+            <td align = "center">Candoia Code</td>
+            <td align = "center">Java Code</td>
+        </tr>
+
+        <tr>
+          <td align = "center">0</td>
+          <td align = "center" >Weka Apriory</td>
+          <td align = "center">141</td>
+          <td align = "center">157</td>
+          <td align = "center">20</td>
+          <td align = "center">178</td>
+          <td align = "center">23</td>
+          <td align = "center">519</td>
+          <td align = "center">83</td>
+          <td align = "center">37</td>
+          <td align = "center">12</td>
+          <td align = "center">34</td>
+          <td align = "center">0</td>
+          <td align = "center"><a href="https://github.com/candoia/file-coupling-using-apriori">github</a></td>
+          <td align = "center"><a href="https://github.com/candoia/candoia-apps-in-java/tree/master/apps/customizations/fileAssociation/apriory">github</a></td>
+        </tr>
+
+
+        <tr>
+          <td align = "center">1</td>
+          <td align = "center">Weka FP-Growth</td>
+          <td align = "center">141(-1,+1)</td>
+          <td align = "center">157(-1,+1)</td>
+          <td align = "center">20(-1,+1)</td>
+          <td align = "center">178(-3,+3)</td>
+          <td align = "center">23(-1,+1)</td>
+          <td align = "center">519(-7,+7)</td>
+          <td align = "center">83(-1,+1)</td>
+          <td align = "center">37(-1,+1)</td>
+          <td align = "center">12(-1,+1)</td>
+          <td align = "center">34(-1,+1)</td>
+          <td align = "center">0</td>    <td align = "center"><a href="https://github.com/candoia/file-coupling-using-fpgrowth">github</a></td>
+          <td align = "center"><a href="https://github.com/candoia/candoia-apps-in-java/tree/master/apps/customizations/fileAssociation/fpgrowth">github</a></td>
+        </tr>
+        <tr>
+          <td align = "center">2</td>
+          <td align = "center">SPMF-ECLAT</td>
+          <td align = "center">141(-1,+1)</td>
+          <td align = "center">157(-1,+1)</td>
+          <td align = "center">20(-1,+1)</td>
+          <td align = "center">183(-23,+28)</td>
+          <td align = "center">23(-1,+1)</td>
+          <td align = "center">524(-27,+32)</td>
+          <td align = "center">83(-1,+1)</td>
+          <td align = "center">37</td>
+          <td align = "center">12(-1,+1)</td>
+          <td align = "center">34(-1,+1)</td>
+          <td align = "center">0</td>
+          <td align = "center"><a href="https://github.com/candoia/file-coupling-using-eclat">github</a></td>
+          <td align = "center"><a href="https://github.com/candoia/candoia-apps-in-java/tree/master/apps/customizations/fileAssociation/spmf/eclat">github</a></td>
+        </tr>
+
+         <tr>
+          <td align = "center">1</td>
+          <td align = "center">Co-Changing Modules</td>
+          <td align = "center">141(-1,+1)</td>
+          <td align = "center">157(-1,+1)</td>
+          <td align = "center">20(-1,+1)</td>
+          <td align = "center">178(-3,+3)</td>
+          <td align = "center">23(-1,+1)</td>
+          <td align = "center">519(-7,+7)</td>
+          <td align = "center">83(-1,+1)</td>
+          <td align = "center">37(-1,+1)</td>
+          <td align = "center">12(-1,+1)</td>
+          <td align = "center">34(-1,+1)</td>
+          <td align = "center">0</td>    <td align = "center"><a href="https://github.com/candoia/module-association-with-apriory">github</a></td>
+          <td align = "center"><a href="https://github.com/candoia/candoia-apps-in-java/tree/master/apps/customizations/fileAssociation/module">github</a></td>
+        </tr>
+
+        <tr>
+          <td align = "center">1</td>
+          <td align = "center">Co-Changing Files without bugs</td>
+          <td align = "center">141(-1,+1)</td>
+          <td align = "center">0</td>
+          <td align = "center">20(-1,+1)</td>
+          <td align = "center">175(-5,+2)</td>
+          <td align = "center">23(-1,+1)</td>
+          <td align = "center">359(-165,+5)</td>
+          <td align = "center">70(-21,+8)</td>
+          <td align = "center">24(-20,+7)</td>
+          <td align = "center">12(-1,+1)</td>
+          <td align = "center">34(-0,+0)</td>
+          <td align = "center">0</td>    <td align = "center"><a href="https://github.com/candoia/all-revision-file-coupling">github</a></td>
+          <td align = "center"><a href="https://github.com/candoia/candoia-apps-in-java/tree/master/apps/customizations/nullcheck/columnToBarChart">github</a></td>
+        </tr>
+        </tbody></table>
 
                  <br><br>
                           x(-y,+z) means there are total x number of lines of code in the module, of which y lines were removed and z lines were added to adopt the code for newer setting
