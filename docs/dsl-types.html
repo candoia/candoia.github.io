@@ -1,0 +1,278 @@
+<table id="Project" class="types ">
+    <tr><td colspan="3"><span class="typename">Project</span> <span class="typedesc">Top-level type, represents a single project on the forge</span></td></tr>
+    <tr><th class="fieldname">Attribute</th><th class="fieldtype">Type</th><th class="fielddesc">Description</th></tr>
+    <tr class="field odd"><td class="fieldname">audiences</td><td class="fieldtype"><a href="/docs/types.php">array</a> of <a href="/docs/types.php">string</a></td><td class="fielddesc">A list of the target audiences for the project</td></tr>
+    <tr class="field even"><td class="fieldname">code_repositories</td><td class="fieldtype"><a href="/docs/types.php">array</a> of <a href="/docs/dsl-types.php#CodeRepository">CodeRepository</a></td><td class="fielddesc">A list of all code repositories associated with this project</td></tr>
+    <tr class="field odd"><td class="fieldname">created_date</td><td class="fieldtype"><a href="/docs/types.php">time</a>?</td><td class="fielddesc">The time the project was created</td></tr>
+    <tr class="field even"><td class="fieldname">databases</td><td class="fieldtype"><a href="/docs/types.php">array</a> of <a href="/docs/types.php">string</a></td><td class="fielddesc">A list of all databases used by the project</td></tr>
+    <tr class="field odd"><td class="fieldname">description</td><td class="fieldtype"><a href="/docs/types.php">string</a>?</td><td class="fielddesc">A description of the project</td></tr>
+    <tr class="field even"><td class="fieldname">developers</td><td class="fieldtype"><a href="/docs/types.php">array</a> of <a href="/docs/dsl-types.php#Person">Person</a></td><td class="fielddesc">A list of all software developers currently on the project</td></tr>
+    <tr class="field odd"><td class="fieldname">donations</td><td class="fieldtype"><a href="/docs/types.php">bool</a>?</td><td class="fielddesc">If <code>true</code>, this project explicitly states it accepts donations</td></tr>
+    <tr class="field even"><td class="fieldname">homepage_url</td><td class="fieldtype"><a href="/docs/types.php">string</a>?</td><td class="fielddesc">A URL to the project's homepage</td></tr>
+    <tr class="field odd"><td class="fieldname">id</td><td class="fieldtype"><a href="/docs/types.php">string</a></td><td class="fielddesc">Unique identifier for the project</td></tr>
+    <tr class="field even"><td class="fieldname">interfaces</td><td class="fieldtype"><a href="/docs/types.php">array</a> of <a href="/docs/types.php">string</a></td><td class="fielddesc">A list of all interfaces supported by the project</td></tr>
+    <tr class="field odd"><td class="fieldname">licenses</td><td class="fieldtype"><a href="/docs/types.php">array</a> of <a href="/docs/types.php">string</a></td><td class="fielddesc">A list of all licenses used by the project</td></tr>
+    <tr class="field even"><td class="fieldname">maintainers</td><td class="fieldtype"><a href="/docs/types.php">array</a> of <a href="/docs/dsl-types.php#Person">Person</a></td><td class="fielddesc">A list of all people currently maintaining the project</td></tr>
+    <tr class="field odd"><td class="fieldname">name</td><td class="fieldtype"><a href="/docs/types.php">string</a></td><td class="fielddesc">The name of the project</td></tr>
+    <tr class="field even"><td class="fieldname">operating_systems</td><td class="fieldtype"><a href="/docs/types.php">array</a> of <a href="/docs/types.php">string</a></td><td class="fielddesc">A list of all OSes supported by the project</td></tr>
+    <tr class="field odd"><td class="fieldname">programming_languages</td><td class="fieldtype"><a href="/docs/types.php">array</a> of <a href="/docs/types.php">string</a></td><td class="fielddesc">A list of all programming languages used by the project</td></tr>
+    <tr class="field even"><td class="fieldname">project_url</td><td class="fieldtype"><a href="/docs/types.php">string</a></td><td class="fielddesc">A URL to the project's page on the forge</td></tr>
+    <tr class="field odd"><td class="fieldname">topics</td><td class="fieldtype"><a href="/docs/types.php">array</a> of <a href="/docs/types.php">string</a></td><td class="fielddesc">A list of self-categorized topics the project belongs to</td></tr>
+</table>
+<table id="CodeRepository" class="types ">
+    <tr><td colspan="3"><span class="typename">CodeRepository</span> <span class="typedesc">A source code repository (SVN, CVS, Git, etc)</span></td></tr>
+    <tr><th class="fieldname">Attribute</th><th class="fieldtype">Type</th><th class="fielddesc">Description</th></tr>
+    <tr class="field odd"><td class="fieldname">kind</td><td class="fieldtype"><a href="/docs/dsl-types.php#enum+RepositoryKind">RepositoryKind</a></td><td class="fielddesc">The kind of code repository (SVN, GIT, etc)</td></tr>
+    <tr class="field even"><td class="fieldname">revisions</td><td class="fieldtype"><a href="/docs/types.php">array</a> of <a href="/docs/dsl-types.php#Revision">Revision</a></td><td class="fielddesc">All of the revisions contained in the code repository</td></tr>
+    <tr class="field odd"><td class="fieldname">url</td><td class="fieldtype"><a href="/docs/types.php">string</a></td><td class="fielddesc">The URL to access the code repository</td></tr>
+</table>
+<table id="enum+RepositoryKind" class="types enum">
+    <tr><td colspan="2"><span class="typename">enum RepositoryKind</span> <span class="typedesc">Describes the kind of code repository</span></td></tr>
+    <tr><th class="fieldname">Attribute</th><th class="fielddesc">Description</th></tr>
+    <tr class="field odd"><td class="fieldname">BZR</td><td class="fielddesc">For Bazaar code repositories</td></tr>
+    <tr class="field even"><td class="fieldname">CVS</td><td class="fielddesc">For CVS code repositories</td></tr>
+    <tr class="field odd"><td class="fieldname">GIT</td><td class="fielddesc">For Git code repositories</td></tr>
+    <tr class="field even"><td class="fieldname">HG</td><td class="fielddesc">For Mercurial code repositories</td></tr>
+    <tr class="field odd"><td class="fieldname">SVN</td><td class="fielddesc">For Subversion code repositories</td></tr>
+    <tr class="field even"><td class="fieldname">UNKNOWN</td><td class="fielddesc">The code repository's kind was not known</td></tr>
+</table>
+<table id="Revision" class="types ">
+    <tr><td colspan="3"><span class="typename">Revision</span> <span class="typedesc">A single revision inside a <code>CodeRepository</code></span></td></tr>
+    <tr><th class="fieldname">Attribute</th><th class="fieldtype">Type</th><th class="fielddesc">Description</th></tr>
+    <tr class="field odd"><td class="fieldname">author</td><td class="fieldtype"><a href="/docs/dsl-types.php#Person">Person</a></td><td class="fielddesc">The person who authored the revision, if known, otherwise the same as committer</td></tr>
+    <tr class="field even"><td class="fieldname">commit_date</td><td class="fieldtype"><a href="/docs/types.php">time</a></td><td class="fielddesc">The time the revision was committed</td></tr>
+    <tr class="field odd"><td class="fieldname">committer</td><td class="fieldtype"><a href="/docs/dsl-types.php#Person">Person</a></td><td class="fielddesc">The person who committed the revision</td></tr>
+    <tr class="field even"><td class="fieldname">files</td><td class="fieldtype"><a href="/docs/types.php">array</a> of <a href="/docs/dsl-types.php#ChangedFile">ChangedFile</a></td><td class="fielddesc">A list of all files committed in the revision</td></tr>
+    <tr class="field odd"><td class="fieldname">id</td><td class="fieldtype"><a href="/docs/types.php">int</a></td><td class="fielddesc">A unique identifier for the revision</td></tr>
+    <tr class="field even"><td class="fieldname">log</td><td class="fieldtype"><a href="/docs/types.php">string</a></td><td class="fielddesc">The log message attached to the revision</td></tr>
+</table>
+<table id="ChangedFile" class="types ">
+    <tr><td colspan="3"><span class="typename">ChangedFile</span> <span class="typedesc">A file committed in a <code>Revision</code></span></td></tr>
+    <tr><th class="fieldname">Attribute</th><th class="fieldtype">Type</th><th class="fielddesc">Description</th></tr>
+    <tr class="field odd"><td class="fieldname">change</td><td class="fieldtype"><a href="/docs/dsl-types.php#enum+ChangeKind">ChangeKind</a></td><td class="fielddesc">The kind of change for this file</td></tr>
+    <tr class="field even"><td class="fieldname">kind</td><td class="fieldtype"><a href="/docs/dsl-types.php#enum+FileKind">FileKind</a></td><td class="fielddesc">The kind of file</td></tr>
+    <tr class="field odd"><td class="fieldname">name</td><td class="fieldtype"><a href="/docs/types.php">string</a></td><td class="fielddesc">The full name and path of the file</td></tr>
+</table>
+<table id="enum+ChangeKind" class="types enum">
+    <tr><td colspan="2"><span class="typename">enum ChangeKind</span> <span class="typedesc">Describes the kind of change for the file</span></td></tr>
+    <tr><th class="fieldname">Attribute</th><th class="fielddesc">Description</th></tr>
+    <tr class="field odd"><td class="fieldname">ADDED</td><td class="fielddesc">The file did not already exist and was added</td></tr>
+    <tr class="field even"><td class="fieldname">DELETED</td><td class="fielddesc">The file was deleted</td></tr>
+    <tr class="field odd"><td class="fieldname">MODIFIED</td><td class="fielddesc">The file already existed and was modified</td></tr>
+</table>
+<table id="enum+FileKind" class="types enum">
+    <tr><td colspan="2"><span class="typename">enum FileKind</span> <span class="typedesc">Describes the kind of the file</span></td></tr>
+    <tr><th class="fieldname">Attribute</th><th class="fielddesc">Description</th></tr>
+    <tr class="field odd"><td class="fieldname">BINARY</td><td class="fielddesc">The file represents a binary file</td></tr>
+    <tr class="field even"><td class="fieldname">SOURCE_JAVA_ERROR</td><td class="fielddesc">The file represents a Java source file that had a parse error</td></tr>
+    <tr class="field odd"><td class="fieldname">SOURCE_JAVA_JLS2</td><td class="fielddesc">The file represents a Java source file that parsed without error as JLS2</td></tr>
+    <tr class="field even"><td class="fieldname">SOURCE_JAVA_JLS3</td><td class="fielddesc">The file represents a Java source file that parsed without error as JLS3</td></tr>
+    <tr class="field odd"><td class="fieldname">SOURCE_JAVA_JLS4</td><td class="fielddesc">The file represents a Java source file that parsed without error as JLS4</td></tr>
+    <tr class="field even"><td class="fieldname">TEXT</td><td class="fielddesc">The file represents a text file</td></tr>
+    <tr class="field odd"><td class="fieldname">UNKNOWN</td><td class="fielddesc">The file's type was unknown</td></tr>
+    <tr class="field even"><td class="fieldname">XML</td><td class="fielddesc">The file represents an XML file</td></tr>
+</table>
+<table id="ASTRoot" class="types ">
+    <tr><td colspan="3"><span class="typename">ASTRoot</span> <span class="typedesc">Container class that holds a file's parsed AST</span></td></tr>
+    <tr><th class="fieldname">Attribute</th><th class="fieldtype">Type</th><th class="fielddesc">Description</th></tr>
+    <tr class="field odd"><td class="fieldname">imports</td><td class="fieldtype"><a href="/docs/types.php">array</a> of <a href="/docs/types.php">string</a></td><td class="fielddesc">The imported namespaces and types</td></tr>
+    <tr class="field even"><td class="fieldname">namespaces</td><td class="fieldtype"><a href="/docs/types.php">array</a> of <a href="/docs/dsl-types.php#Namespace">Namespace</a></td><td class="fielddesc">The top-level namespaces in the file</td></tr>
+</table>
+<table id="Namespace" class="types ">
+    <tr><td colspan="3"><span class="typename">Namespace</span> <span class="typedesc">A namespace (aka, package) in a source file</span></td></tr>
+    <tr><th class="fieldname">Attribute</th><th class="fieldtype">Type</th><th class="fielddesc">Description</th></tr>
+    <tr class="field odd"><td class="fieldname">declarations</td><td class="fieldtype"><a href="/docs/types.php">array</a> of <a href="/docs/dsl-types.php#Declaration">Declaration</a></td><td class="fielddesc">Declarations contained in this namespace</td></tr>
+    <tr class="field even"><td class="fieldname">modifiers</td><td class="fieldtype"><a href="/docs/types.php">array</a> of <a href="/docs/dsl-types.php#Modifier">Modifier</a></td><td class="fielddesc">Any modifiers/annotations on the namespace</td></tr>
+    <tr class="field odd"><td class="fieldname">name</td><td class="fieldtype"><a href="/docs/types.php">string</a></td><td class="fielddesc">The name of the namespace</td></tr>
+</table>
+<table id="Declaration" class="types ">
+    <tr><td colspan="3"><span class="typename">Declaration</span> <span class="typedesc">A type declaration, such as a class or interface</span></td></tr>
+    <tr><th class="fieldname">Attribute</th><th class="fieldtype">Type</th><th class="fielddesc">Description</th></tr>
+    <tr class="field odd"><td class="fieldname">fields</td><td class="fieldtype"><a href="/docs/types.php">array</a> of <a href="/docs/dsl-types.php#Variable">Variable</a></td><td class="fielddesc">The fields in the declaration</td></tr>
+    <tr class="field even"><td class="fieldname">generic_parameters</td><td class="fieldtype"><a href="/docs/types.php">array</a> of <a href="/docs/dsl-types.php#Type">Type</a></td><td class="fielddesc">Any generic parameters to this declaration</td></tr>
+    <tr class="field odd"><td class="fieldname">kind</td><td class="fieldtype"><a href="/docs/dsl-types.php#enum+TypeKind">TypeKind</a></td><td class="fielddesc">The kind of this declaration</td></tr>
+    <tr class="field even"><td class="fieldname">methods</td><td class="fieldtype"><a href="/docs/types.php">array</a> of <a href="/docs/dsl-types.php#Method">Method</a></td><td class="fielddesc">The methods in the declaration</td></tr>
+    <tr class="field odd"><td class="fieldname">modifiers</td><td class="fieldtype"><a href="/docs/types.php">array</a> of <a href="/docs/dsl-types.php#Modifier">Modifier</a></td><td class="fielddesc">The modifiers/annotations on this declaration</td></tr>
+    <tr class="field even"><td class="fieldname">name</td><td class="fieldtype"><a href="/docs/types.php">string</a></td><td class="fielddesc">The name of this declaration</td></tr>
+    <tr class="field odd"><td class="fieldname">nested_declarations</td><td class="fieldtype"><a href="/docs/types.php">array</a> of <a href="/docs/dsl-types.php#Declaration">Declaration</a></td><td class="fielddesc">Any nested declarations</td></tr>
+    <tr class="field even"><td class="fieldname">parents</td><td class="fieldtype"><a href="/docs/types.php">array</a> of <a href="/docs/dsl-types.php#Type">Type</a></td><td class="fielddesc">The explicitly named parent type(s) of this declaration</td></tr>
+</table>
+<table id="Type" class="types ">
+    <tr><td colspan="3"><span class="typename">Type</span> <span class="typedesc">A type in an AST</span></td></tr>
+    <tr><th class="fieldname">Attribute</th><th class="fieldtype">Type</th><th class="fielddesc">Description</th></tr>
+    <tr class="field odd"><td class="fieldname">kind</td><td class="fieldtype"><a href="/docs/dsl-types.php#enum+TypeKind">TypeKind</a></td><td class="fielddesc">The kind of the type</td></tr>
+    <tr class="field even"><td class="fieldname">name</td><td class="fieldtype"><a href="/docs/types.php">string</a></td><td class="fielddesc">The name of the type</td></tr>
+</table>
+<table id="enum+TypeKind" class="types enum">
+    <tr><td colspan="2"><span class="typename">enum TypeKind</span> <span class="typedesc">The kinds of types in an AST</span></td></tr>
+    <tr><th class="fieldname">Attribute</th><th class="fielddesc">Description</th></tr>
+    <tr class="field odd"><td class="fieldname">ANNOTATION</td><td class="fielddesc">An annotation type</td></tr>
+    <tr class="field even"><td class="fieldname">ANONYMOUS</td><td class="fielddesc">An anonymous type</td></tr>
+    <tr class="field odd"><td class="fieldname">CLASS</td><td class="fielddesc">A class type</td></tr>
+    <tr class="field even"><td class="fieldname">DELEGATE</td><td class="fielddesc">A delegate type</td></tr>
+    <tr class="field odd"><td class="fieldname">ENUM</td><td class="fielddesc">An enumerated type</td></tr>
+    <tr class="field even"><td class="fieldname">GENERIC</td><td class="fielddesc">A generic type</td></tr>
+    <tr class="field odd"><td class="fieldname">INTERFACE</td><td class="fielddesc">An interface type</td></tr>
+    <tr class="field even"><td class="fieldname">OTHER</td><td class="fielddesc">Any other kind of Type</td></tr>
+    <tr class="field odd"><td class="fieldname">STRUCT</td><td class="fielddesc">A struct</td></tr>
+</table>
+<table id="Method" class="types ">
+    <tr><td colspan="3"><span class="typename">Method</span> <span class="typedesc">A method declaration</span></td></tr>
+    <tr><th class="fieldname">Attribute</th><th class="fieldtype">Type</th><th class="fielddesc">Description</th></tr>
+    <tr class="field odd"><td class="fieldname">arguments</td><td class="fieldtype"><a href="/docs/types.php">array</a> of <a href="/docs/dsl-types.php#Variable">Variable</a></td><td class="fielddesc">The arguments the method takes</td></tr>
+    <tr class="field even"><td class="fieldname">exception_types</td><td class="fieldtype"><a href="/docs/types.php">array</a> of <a href="/docs/dsl-types.php#Type">Type</a></td><td class="fielddesc">The list of exceptions thrown by this method</td></tr>
+    <tr class="field odd"><td class="fieldname">generic_parameters</td><td class="fieldtype"><a href="/docs/types.php">array</a> of <a href="/docs/dsl-types.php#Type">Type</a></td><td class="fielddesc">The list of generic parameters for this method</td></tr>
+    <tr class="field even"><td class="fieldname">modifiers</td><td class="fieldtype"><a href="/docs/types.php">array</a> of <a href="/docs/dsl-types.php#Modifier">Modifier</a></td><td class="fielddesc">A list of all modifiers on the variable</td></tr>
+    <tr class="field odd"><td class="fieldname">name</td><td class="fieldtype"><a href="/docs/types.php">string</a></td><td class="fielddesc">The name of the method</td></tr>
+    <tr class="field even"><td class="fieldname">return_type</td><td class="fieldtype"><a href="/docs/dsl-types.php#Type">Type</a></td><td class="fielddesc">The type returned from the method; if the method returns nothing, this type will be <code>void</code></td></tr>
+    <tr class="field odd"><td class="fieldname">statements</td><td class="fieldtype"><a href="/docs/types.php">array</a> of <a href="/docs/dsl-types.php#Statement">Statement</a></td><td class="fielddesc">The statements in the method body.  Note that most methods (in C-like languages, such as Java) contain a single statement of type BLOCK, which contains the list of statements within it!</td></tr>
+</table>
+<table id="Variable" class="types ">
+    <tr><td colspan="3"><span class="typename">Variable</span> <span class="typedesc">A variable declaration - can be a field, local, parameter, etc</span></td></tr>
+    <tr><th class="fieldname">Attribute</th><th class="fieldtype">Type</th><th class="fielddesc">Description</th></tr>
+    <tr class="field odd"><td class="fieldname">initializer</td><td class="fieldtype"><a href="/docs/dsl-types.php#Expression">Expression</a>?</td><td class="fielddesc">If the variable has an initial assignment, the expression is stored here</td></tr>
+    <tr class="field even"><td class="fieldname">modifiers</td><td class="fieldtype"><a href="/docs/types.php">array</a> of <a href="/docs/dsl-types.php#Modifier">Modifier</a></td><td class="fielddesc">A list of all modifiers on the variable</td></tr>
+    <tr class="field odd"><td class="fieldname">name</td><td class="fieldtype"><a href="/docs/types.php">string</a></td><td class="fielddesc">The name of the variable</td></tr>
+    <tr class="field even"><td class="fieldname">variable_type</td><td class="fieldtype"><a href="/docs/dsl-types.php#Type">Type</a></td><td class="fielddesc">The type of the variable</td></tr>
+</table>
+<table id="Statement" class="types ">
+    <tr><td colspan="3"><span class="typename">Statement</span> <span class="typedesc">A single statement</span></td></tr>
+    <tr><th class="fieldname">Attribute</th><th class="fieldtype">Type</th><th class="fielddesc">Description</th></tr>
+    <tr class="field odd"><td class="fieldname">condition</td><td class="fieldtype"><a href="/docs/dsl-types.php#Expression">Expression</a>?</td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">expression</td><td class="fieldtype"><a href="/docs/dsl-types.php#Expression">Expression</a>?</td><td class="fielddesc"></td></tr>
+    <tr class="field odd"><td class="fieldname">initializations</td><td class="fieldtype"><a href="/docs/types.php">array</a> of <a href="/docs/dsl-types.php#Expression">Expression</a></td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">kind</td><td class="fieldtype"><a href="/docs/dsl-types.php#enum+StatementKind">StatementKind</a></td><td class="fielddesc">The kind of statement</td></tr>
+    <tr class="field odd"><td class="fieldname">statements</td><td class="fieldtype"><a href="/docs/types.php">array</a> of <a href="/docs/dsl-types.php#Statement">Statement</a></td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">type_declaration</td><td class="fieldtype"><a href="/docs/dsl-types.php#Declaration">Declaration</a>?</td><td class="fielddesc"></td></tr>
+    <tr class="field odd"><td class="fieldname">updates</td><td class="fieldtype"><a href="/docs/types.php">array</a> of <a href="/docs/dsl-types.php#Expression">Expression</a></td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">variable_declaration</td><td class="fieldtype"><a href="/docs/dsl-types.php#Variable">Variable</a>?</td><td class="fielddesc"></td></tr>
+</table>
+<table id="enum+StatementKind" class="types enum">
+    <tr><td colspan="2"><span class="typename">enum StatementKind</span> <span class="typedesc">The kind of statement</span></td></tr>
+    <tr><th class="fieldname">Attribute</th><th class="fielddesc">Description</th></tr>
+    <tr class="field odd"><td class="fieldname">ASSERT</td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">BLOCK</td><td class="fielddesc"></td></tr>
+    <tr class="field odd"><td class="fieldname">BREAK</td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">CASE</td><td class="fielddesc"></td></tr>
+    <tr class="field odd"><td class="fieldname">CATCH</td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">CONTINUE</td><td class="fielddesc"></td></tr>
+    <tr class="field odd"><td class="fieldname">DO</td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">EMPTY</td><td class="fielddesc"></td></tr>
+    <tr class="field odd"><td class="fieldname">EXPRESSION</td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">FOR</td><td class="fielddesc"></td></tr>
+    <tr class="field odd"><td class="fieldname">IF</td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">LABEL</td><td class="fielddesc"></td></tr>
+    <tr class="field odd"><td class="fieldname">OTHER</td><td class="fielddesc">Any other statement</td></tr>
+    <tr class="field even"><td class="fieldname">RETURN</td><td class="fielddesc"></td></tr>
+    <tr class="field odd"><td class="fieldname">SWITCH</td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">SYNCHRONIZED</td><td class="fielddesc"></td></tr>
+    <tr class="field odd"><td class="fieldname">THROW</td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">TRY</td><td class="fielddesc"></td></tr>
+    <tr class="field odd"><td class="fieldname">TYPEDECL</td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">WHILE</td><td class="fielddesc"></td></tr>
+</table>
+<table id="Expression" class="types ">
+    <tr><td colspan="3"><span class="typename">Expression</span> <span class="typedesc">A single expression</span></td></tr>
+    <tr><th class="fieldname">Attribute</th><th class="fieldtype">Type</th><th class="fielddesc">Description</th></tr>
+    <tr class="field odd"><td class="fieldname">annotation</td><td class="fieldtype"><a href="/docs/dsl-types.php#Modifier">Modifier</a>?</td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">anon_declaration</td><td class="fieldtype"><a href="/docs/dsl-types.php#Declaration">Declaration</a>?</td><td class="fielddesc"></td></tr>
+    <tr class="field odd"><td class="fieldname">expressions</td><td class="fieldtype"><a href="/docs/types.php">array</a> of <a href="/docs/dsl-types.php#Expression">Expression</a></td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">generic_parameters</td><td class="fieldtype"><a href="/docs/types.php">array</a> of <a href="/docs/dsl-types.php#Type">Type</a></td><td class="fielddesc"></td></tr>
+    <tr class="field odd"><td class="fieldname">is_postfix</td><td class="fieldtype"><a href="/docs/types.php">bool</a>?</td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">kind</td><td class="fieldtype"><a href="/docs/dsl-types.php#enum+ExpressionKind">ExpressionKind</a></td><td class="fielddesc">The kind of expression</td></tr>
+    <tr class="field odd"><td class="fieldname">literal</td><td class="fieldtype"><a href="/docs/types.php">string</a>?</td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">method</td><td class="fieldtype"><a href="/docs/types.php">string</a>?</td><td class="fielddesc"></td></tr>
+    <tr class="field odd"><td class="fieldname">method_args</td><td class="fieldtype"><a href="/docs/types.php">array</a> of <a href="/docs/dsl-types.php#Expression">Expression</a></td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">new_type</td><td class="fieldtype"><a href="/docs/dsl-types.php#Type">Type</a>?</td><td class="fielddesc"></td></tr>
+    <tr class="field odd"><td class="fieldname">variable</td><td class="fieldtype"><a href="/docs/types.php">string</a>?</td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">variable_decls</td><td class="fieldtype"><a href="/docs/types.php">array</a> of <a href="/docs/dsl-types.php#Variable">Variable</a></td><td class="fielddesc"></td></tr>
+</table>
+<table id="enum+ExpressionKind" class="types enum">
+    <tr><td colspan="2"><span class="typename">enum ExpressionKind</span> <span class="typedesc">The kind of expression</span></td></tr>
+    <tr><th class="fieldname">Attribute</th><th class="fielddesc">Description</th></tr>
+    <tr class="field odd"><td class="fieldname">ANNOTATION</td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">ARRAYINDEX</td><td class="fielddesc"></td></tr>
+    <tr class="field odd"><td class="fieldname">ARRAYINIT</td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">ASSIGN</td><td class="fielddesc"></td></tr>
+    <tr class="field odd"><td class="fieldname">ASSIGN_ADD</td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">ASSIGN_BITAND</td><td class="fielddesc"></td></tr>
+    <tr class="field odd"><td class="fieldname">ASSIGN_BITOR</td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">ASSIGN_BITXOR</td><td class="fielddesc"></td></tr>
+    <tr class="field odd"><td class="fieldname">ASSIGN_DIV</td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">ASSIGN_LSHIFT</td><td class="fielddesc"></td></tr>
+    <tr class="field odd"><td class="fieldname">ASSIGN_MOD</td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">ASSIGN_MULT</td><td class="fielddesc"></td></tr>
+    <tr class="field odd"><td class="fieldname">ASSIGN_RSHIFT</td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">ASSIGN_SUB</td><td class="fielddesc"></td></tr>
+    <tr class="field odd"><td class="fieldname">ASSIGN_UNSIGNEDRSHIFT</td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">BIT_AND</td><td class="fielddesc"></td></tr>
+    <tr class="field odd"><td class="fieldname">BIT_LSHIFT</td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">BIT_NOT</td><td class="fielddesc"></td></tr>
+    <tr class="field odd"><td class="fieldname">BIT_OR</td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">BIT_RSHIFT</td><td class="fielddesc"></td></tr>
+    <tr class="field odd"><td class="fieldname">BIT_UNSIGNEDRSHIFT</td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">BIT_XOR</td><td class="fielddesc"></td></tr>
+    <tr class="field odd"><td class="fieldname">CAST</td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">CONDITIONAL</td><td class="fielddesc"></td></tr>
+    <tr class="field odd"><td class="fieldname">EQ</td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">GT</td><td class="fielddesc"></td></tr>
+    <tr class="field odd"><td class="fieldname">GTEQ</td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">LITERAL</td><td class="fielddesc"></td></tr>
+    <tr class="field odd"><td class="fieldname">LOGICAL_AND</td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">LOGICAL_NOT</td><td class="fielddesc"></td></tr>
+    <tr class="field odd"><td class="fieldname">LOGICAL_OR</td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">LT</td><td class="fielddesc"></td></tr>
+    <tr class="field odd"><td class="fieldname">LTEQ</td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">METHODCALL</td><td class="fielddesc"></td></tr>
+    <tr class="field odd"><td class="fieldname">NEQ</td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">NEW</td><td class="fielddesc"></td></tr>
+    <tr class="field odd"><td class="fieldname">NEWARRAY</td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">NULLCOALESCE</td><td class="fielddesc"></td></tr>
+    <tr class="field odd"><td class="fieldname">OP_ADD</td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">OP_DEC</td><td class="fielddesc"></td></tr>
+    <tr class="field odd"><td class="fieldname">OP_DIV</td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">OP_INC</td><td class="fielddesc"></td></tr>
+    <tr class="field odd"><td class="fieldname">OP_MOD</td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">OP_MULT</td><td class="fielddesc"></td></tr>
+    <tr class="field odd"><td class="fieldname">OP_SUB</td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">OTHER</td><td class="fielddesc">Any other expression</td></tr>
+    <tr class="field odd"><td class="fieldname">TYPECOMPARE</td><td class="fielddesc"></td></tr>
+    <tr class="field even"><td class="fieldname">VARACCESS</td><td class="fielddesc"></td></tr>
+    <tr class="field odd"><td class="fieldname">VARDECL</td><td class="fielddesc"></td></tr>
+</table>
+<table id="Modifier" class="types ">
+    <tr><td colspan="3"><span class="typename">Modifier</span> <span class="typedesc">A single modifier</span></td></tr>
+    <tr><th class="fieldname">Attribute</th><th class="fieldtype">Type</th><th class="fielddesc">Description</th></tr>
+    <tr class="field odd"><td class="fieldname">annotation_members</td><td class="fieldtype"><a href="/docs/types.php">array</a> of <a href="/docs/types.php">string</a></td><td class="fielddesc">If the <code>kind</code> is <code>ANNOTATION</code>, then a list of all members explicitly assigned values</td></tr>
+    <tr class="field even"><td class="fieldname">annotation_name</td><td class="fieldtype"><a href="/docs/types.php">string</a>?</td><td class="fielddesc">If the <code>kind</code> is <code>ANNOTATION</code>, then the name of the annotation</td></tr>
+    <tr class="field odd"><td class="fieldname">annotation_values</td><td class="fieldtype"><a href="/docs/types.php">array</a> of <a href="/docs/dsl-types.php#Expression">Expression</a></td><td class="fielddesc">If the <code>kind</code> is <code>ANNOTATION</code>, then a list of all values that were assigned to members</td></tr>
+    <tr class="field even"><td class="fieldname">kind</td><td class="fieldtype"><a href="/docs/dsl-types.php#enum+ModifierKind">ModifierKind</a></td><td class="fielddesc">The kind of modifier</td></tr>
+    <tr class="field odd"><td class="fieldname">other</td><td class="fieldtype"><a href="/docs/types.php">string</a>?</td><td class="fielddesc">If the modifier <code>kind</code> is <code>OTHER</code>, the modifier string from the source code</td></tr>
+    <tr class="field even"><td class="fieldname">visibility</td><td class="fieldtype"><a href="/docs/dsl-types.php#enum+Visibility">Visibility</a></td><td class="fielddesc">A kind of visibility modifier</td></tr>
+</table>
+<table id="enum+ModifierKind" class="types enum">
+    <tr><td colspan="2"><span class="typename">enum ModifierKind</span> <span class="typedesc">The kind of modifier</span></td></tr>
+    <tr><th class="fieldname">Attribute</th><th class="fielddesc">Description</th></tr>
+    <tr class="field odd"><td class="fieldname">ABSTRACT</td><td class="fielddesc">An abstract modifier</td></tr>
+    <tr class="field even"><td class="fieldname">ANNOTATION</td><td class="fielddesc">An annotation modifier</td></tr>
+    <tr class="field odd"><td class="fieldname">FINAL</td><td class="fielddesc">A final modifier</td></tr>
+    <tr class="field even"><td class="fieldname">OTHER</td><td class="fielddesc">Any other modifier - the value is in the <a href="/docs/dsl-types.php#Modifier">Modifier</a>'s <code>other</code> attribute</td></tr>
+    <tr class="field odd"><td class="fieldname">STATIC</td><td class="fielddesc">A static modifier</td></tr>
+    <tr class="field even"><td class="fieldname">SYNCHRONIZED</td><td class="fielddesc">A synchronized modifier</td></tr>
+    <tr class="field odd"><td class="fieldname">VISIBILITY</td><td class="fielddesc">A Visibility modifier - the value is in the <a href="/docs/dsl-types.php#Modifier">Modifier</a>'s <code>visibility</code> attribute</td></tr>
+</table>
+<table id="enum+Visibility" class="types enum">
+    <tr><td colspan="2"><span class="typename">enum Visibility</span> <span class="typedesc">A visibility modifier</span></td></tr>
+    <tr><th class="fieldname">Attribute</th><th class="fielddesc">Description</th></tr>
+    <tr class="field odd"><td class="fieldname">NAMESPACE</td><td class="fielddesc">A namespace (aka, default, aka package) visibility modifier</td></tr>
+    <tr class="field even"><td class="fieldname">PRIVATE</td><td class="fielddesc">A private modifier</td></tr>
+    <tr class="field odd"><td class="fieldname">PROTECTED</td><td class="fielddesc">A protected modifier</td></tr>
+    <tr class="field even"><td class="fieldname">PUBLIC</td><td class="fielddesc">A public modifier</td></tr>
+</table>
+<table id="Person" class="types ">
+    <tr><td colspan="3"><span class="typename">Person</span> <span class="typedesc">A unique person's information</span></td></tr>
+    <tr><th class="fieldname">Attribute</th><th class="fieldtype">Type</th><th class="fielddesc">Description</th></tr>
+    <tr class="field odd"><td class="fieldname">email</td><td class="fieldtype"><a href="/docs/types.php">string</a></td><td class="fielddesc">The person's email address, if known</td></tr>
+    <tr class="field even"><td class="fieldname">real_name</td><td class="fieldtype"><a href="/docs/types.php">string</a></td><td class="fielddesc">The person's real name, if known, otherwise the same as username</td></tr>
+    <tr class="field odd"><td class="fieldname">username</td><td class="fieldtype"><a href="/docs/types.php">string</a></td><td class="fielddesc">The person's username</td></tr>
+</table>
