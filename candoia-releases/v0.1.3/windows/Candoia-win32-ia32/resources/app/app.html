@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang='en'>
+<head>
+  <meta charset="utf-8">
+  <title>Candoia</title>
+
+  <link href="./css/main.css" rel="stylesheet" type="text/css">
+  <!-- <link href="./css/font-awesome.css" rel="stylesheet" type="text/css"> -->
+  <!--
+  <link href="./css/scaffolding.css" rel="stylesheet" type="text/css">
+  <link href="./css/work-sans.css" rel="stylesheet" type="text/css">
+  -->
+
+  <script src="vendor/candoia/env-config.js"></script>
+  <script src="vendor/candoia/context-menu.js"></script>
+  <script src="vendor/candoia/external-links.js"></script>
+
+  <script src="vendor/require.js"></script>
+  <script>
+    requirejs(['app'], function (app) {});
+  </script>
+</head>
+<body>
+  <div class='main-container'>
+    <div class='curtain'></div>
+    <div class='axis axis-horizontal'>
+        <div class='panel-container left'>
+          <div id='side-panel' class='panel left'>
+            <nav class='menu' id='repo-tree'></nav>
+            <div style='width:200px;'></div>
+          </div>
+        </div>
+        <div class='axis axis-vertical'>
+          <div class='panel-container top'>
+            <div class='panel top'>
+            </div>
+          </div>
+          <div class='pane-container master'>
+            <div id='pane-root' class='pane-axis horizontal' style='flex-grow: 1'>
+              <div class='pane active' style='flex-grow: 1'>
+                <div class='tab-container'>
+                </div>
+                <div class='pane-content'>
+                  <div class='pane-body-container'>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='panel-container bottom'>
+            <div class='panel bottom'>
+              <div class='footer'>
+                <!--
+                <p style='float: left' class='btn-link' id='side-panel-toggle'>
+                  <i class='fa fa-fw fa-angle-double-left'></i>
+                </p>
+                -->
+                <p id='goto-about' class='btn-link' style='float: left'>
+                  About
+                  <i class='fa fa-fw fa-info-circle'></i>
+                </p>
+                <p id='install-app' class='btn-link' style='float: left;'>
+                   Install App
+                  <i class='fa fa-fw fa-rocket'></i>
+                </p>
+                <!-- <p style='float: right;'>
+                  <input type='text'></input>
+                  <i class='fa fa-fw fa-lg fa-search'></i>
+                </p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='panel-container right'></div>
+      </div>
+  </div>
+</body>
+</html>
